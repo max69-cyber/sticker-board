@@ -54,4 +54,5 @@ npm run dev
 ## Деплой
 
 Приложение доступно на github pages:
+https://max69-cyber.github.io/sticker-board/
 
