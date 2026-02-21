@@ -1,48 +1,57 @@
-# sticker-board
+# Sticker Board
 
-This template should help get you started developing with Vue 3 in Vite.
+Интерактивное веб-приложение с фиксированным холстом и стикерами.
+Поддерживает создание стикеров, их перемещение, изменение размера, редактирование текста и автоматическую адаптацию шрифта.
 
-## Recommended IDE Setup
+<img width="1899" height="950" alt="image" src="https://github.com/user-attachments/assets/83c219d4-f68c-4b8a-bf49-31707b40886f" />
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Технологии
 
-## Recommended Browser Setup
+- Vue 3 (Composition API)
+- TypeScript
+- Vite
+- Pinia
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Функционал
 
-## Type Support for `.vue` Imports in TS
+- Создание новых стикеров
+- Перемещение стикеров по холсту (drag & drop)
+- Изменение размера стикера за углы
+- Автоматическое масштабирование текста под размер блока
+- Запрет пересечения стикеров с процессами
+- Выделение активного стикера
+- Редактирование текста
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Customize configuration
+## Особенности реализации
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Используются pointer events
+- Проверка пересечений через AABB (Axis-Aligned Bounding Box)
+- Скользящая коллизия по осям (X/Y)
+- Минимальный размер стикера зависит от минимального размера шрифта
+- CSS Modules для изоляции стилей
 
-## Project Setup
+## Как запустить
 
-```sh
+- Клонируйте репозиторий
+```
+git clone https://github.com/max69-cyber/sticker-board.git
+```
+- Перейдите в папку проекта
+```
+cd sticker-board
+```
+- Установите зависимости проекта
+```
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+- Запустите приложение
+```
 npm run dev
 ```
+После этого откройте в браузере адрес, указанный в консоли.
 
-### Type-Check, Compile and Minify for Production
+## Деплой
 
-```sh
-npm run build
-```
+Приложение доступно на github pages:
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
